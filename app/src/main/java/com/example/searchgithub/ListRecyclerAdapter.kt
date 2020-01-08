@@ -13,7 +13,6 @@ import kotlinx.android.synthetic.main.news_item.view.*
  */
 class ListRecyclerAdapter(private val userlist: ArrayList<User>): RecyclerView.Adapter<ListRecyclerAdapter.NewsHolder>() {
 
-
     override fun getItemCount(): Int {
         return userlist.size
     }
