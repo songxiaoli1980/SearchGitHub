@@ -1,5 +1,6 @@
 package com.example.searchgithub
 
+import android.content.Intent
 import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log
 import android.view.LayoutInflater
@@ -41,10 +42,12 @@ class ListRecyclerAdapter(private val userlist: ArrayList<User>): RecyclerView.A
         override fun onClick(v: View?) {
             Log.d("RecyclerView", "CLICK!")
 
-//            val context = itemView.context
-//            val showPhotoIntent = Intent(context, PhotoActivity::class.java)
-//            showPhotoIntent.putExtra(PHOTO_KEY, photo)
-//            context.startActivity(showPhotoIntent)
+            val context = itemView.context
+            val showPhotoIntent = Intent(context,SecondActivity::class.java )
+            showPhotoIntent.putExtra("name", userlist?.username)
+            showPhotoIntent.putExtra("repositoriesnumber", userlist?.repositoriesnumber)
+            showPhotoIntent.putExtra("image", userlist?.image)
+            context.startActivity(showPhotoIntent)
         }
 
         fun bindNews(userlist: User) {

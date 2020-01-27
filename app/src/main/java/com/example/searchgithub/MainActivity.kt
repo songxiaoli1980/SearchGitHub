@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val newsRecyclerView = findViewById(R.id.recycleview) as RecyclerView
-        val editTextSearch :EditText= findViewById(R.id.editTextSearch);
+        val editTextSearch :EditText= findViewById(R.id.editTextSearch)
         newsRecyclerView.layoutManager = LinearLayoutManager(this)
         val requestQueue = Volley.newRequestQueue(this)
         val url = "https://api.github.com/users"
